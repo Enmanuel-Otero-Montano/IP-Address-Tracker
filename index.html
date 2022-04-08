@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ip Address Tracker</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="hero">IP Address Traker</h1>
+    </header>
+    <div class="container">
+        <form action="" id="form" class="form">
+            <input type="search" class="ip-search" placeholder="Search for any IP address or domain">
+            <button class="search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+            </button>
+        </form>
+        <div class="information-container">
+            <div class="ip-address-container">
+                <h2 class="categories">IP ADDRESS</h2>
+                <p id="data-ip" class="data"></p>
+            </div>
+            <div class="location-container divider">
+                <h2 class="categories">LOCATION</h2>
+                <p id="data-location" class="data"></p>
+            </div>
+            <div class="time-zone-container divider">
+                <h2 class="categories">TIME ZONE</h2>
+                <p id="data-time-zone" class="data"></p>
+            </div>
+            <div class="isp-container divider">
+                <h2 class="categories">ISP</h2>
+                <p id="data-isp" class="data"></p>
+            </div>
+        </div>
+    </div>
+    <div id="map">
+
+    </div>
+    <script src="js/js.js"></script>
+</body>
+</html>
