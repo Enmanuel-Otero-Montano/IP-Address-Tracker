@@ -5,12 +5,6 @@ const currentLocation = document.getElementById("data-location")
 const timeZone = document.getElementById("data-time-zone")
 const isp = document.getElementById("data-isp")
 
-
-let locationIcon = L.icon ({
-    iconUrl: "../assets/images/icon-location.svg",
-    iconSize: [33, 45]
-})
-
 button.addEventListener("click", (e) => {
     e.preventDefault()
     fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_4o0kCV0BClBandpmlq8MFweNjkcHV&ipAddress=${inputSearch.value}`)
@@ -37,7 +31,7 @@ const iii = () => {
         isp.textContent = res.isp
 
         let map = L.map('map').setView([res.location.lat, res.location.lng], 16)
-        L.marker([res.location.lat, res.location.lng], {icon: locationIcon}).addTo(map)
+        L.marker([res.location.lat, res.location.lng]).addTo(map)
 
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZW5tYW51ZWxlIiwiYSI6ImNsMXFkcWRtNTEzZ20zam1vbXYxc3VmZDcifQ.6wcdLFx15YK3NNq_Vk4ezA', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
