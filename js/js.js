@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoad",myLocation())
 
 let locat
 
-inputSearch.addEventListener("change", () => {
+inputSearch.addEventListener("keydown", () => {
     locat = inputSearch.value
 })
 
