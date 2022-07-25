@@ -16,7 +16,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(map)
 
 let icon = L.icon({
-    iconUrl: "../../assets/images/icon-location.svg",
+    iconUrl: ".././assets/images/icon-location.svg",
 
     iconSize:     [38, 55],
 })
