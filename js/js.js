@@ -43,12 +43,13 @@ inputSearch.addEventListener("keydown", () => {
 })
 
 button.addEventListener("click", (e) => {
+    console.dir(inputSearch)
     e.preventDefault()
-    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_72EZM1z0shBF37zbDWinVdiAyRdXj&ipAddress=${locat}`)
+    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_72EZM1z0shBF37zbDWinVdiAyRdXj&ipAddress=${inputSearch.value}`)
     .then(res => res.ok == true ? Promise.resolve(res) : Promise.reject(res))
     .then(res => res.json())
     .then(res => {
-        ip.textContent = res.ip
+        ip.textContent = inputSearch.value
         currentLocation.textContent = `${res.location.city}, ${res.location.region}`
         timeZone.textContent = res.location.timezone
         isp.textContent = res.isp
